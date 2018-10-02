@@ -88,9 +88,9 @@ public class HttpApplication extends AbstractVerticle {
         }
         String name = rc.request().getParam("name");
         if (name == null) {
-            name = "World";
+            name = "Foo";
         }
-
+        name = "foo";
         LOGGER.debug("Replying to request, parameter={}", name);
         JsonObject response = new JsonObject()
             .put("content", String.format(message, name));
